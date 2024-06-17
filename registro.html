@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="stylesregistro.css">
+    <link rel="shortcut icon" type="image\jpg" href="SHIELDTECH/Img/logo.jpg">
+    <script>
+        function limpiarFormulario() {
+            document.getElementById('nombre').value = "";
+            document.getElementById('correo').value = "";
+            document.getElementById('clave').value = "";
+        }
+    </script>
+</head>
+<body onload="limpiarFormulario()">
+    <h1>Registro de Usuario</h1>
+    <form action="procesarregistro.php" method="post">
+        <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+
+        <br>
+        <input type="email" id="correo" name="correo" required placeholder="Correo">
+
+        <br>
+        <input type="password" id="clave" name="clave" required placeholder="Contraseña">
+        <br>
+
+        <select id="tipo_usuario" name="tipo_usuario" required>
+            <option value="vendedor">Cajero</option>
+            <option value="tecnico">Técnico</option>
+            <option value="gerente">Gerente</option>
+            <option value="admin">Administrador</option>
+        </select>
+        <br>
+        <button type="submit" id="btnregistrar">Registrar</button>
+    </form>
+</body>
+</html>
